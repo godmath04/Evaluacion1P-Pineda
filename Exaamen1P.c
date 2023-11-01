@@ -25,8 +25,9 @@ int sumaDigitos(int num)
     {
         aux = num % 10; // Me entrada el residuo de cada expresion
         suma = suma + aux;
+        num = num / 10;
     }
-    num = num / 10; // Disminuyo el numero en una unidad a la derecha
+    // Disminuyo el numero en una unidad a la derecha
     return suma;
 }
 
