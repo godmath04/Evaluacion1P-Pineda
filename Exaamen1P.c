@@ -23,19 +23,19 @@ int sumaDigitos(int num)
     int aux; // Variable auxiliar de la suma
     while (num != 0)
     {
-        aux = num % 10; // Me entrada el residuo de cada expresion
+        aux = num % 10; // Me quedo con el residuo del numero, es decir, su ultima cifra y la sumo
         suma = suma + aux;
-        num = num / 10;
+        num = num / 10 ;// Disminuyo una cifra para verificar los demas numeros
     }
-    // Disminuyo el numero en una unidad a la derecha
     return suma;
 }
 
 int main()
 {
     int numero = 0;
-    printf("Ingrese un numero para contar los digitos\n");
+    printf("Ingrese un numero para contar los digitos: ");
     scanf("%d", &numero);
+    printf("\n");
     // PRIMERA PARTE DEL CONTEO
     printf("La cantidad de digitos de su numero %d es: %d.\n", numero, conteoDigitos(numero));
     printf("\n");
