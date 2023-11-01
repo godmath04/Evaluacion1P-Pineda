@@ -25,7 +25,7 @@ int sumaDigitos(int num)
     {
         aux = num % 10; // Me quedo con el residuo del numero, es decir, su ultima cifra y la sumo
         suma = suma + aux;
-        num = num / 10 ;// Disminuyo una cifra para verificar los demas numeros
+        num = num / 10; // Disminuyo una cifra para verificar los demas numeros
     }
     return suma;
 }
@@ -36,10 +36,19 @@ int main()
     printf("Ingrese un numero para contar los digitos: ");
     scanf("%d", &numero);
     printf("\n");
-    // PRIMERA PARTE DEL CONTEO
-    printf("La cantidad de digitos de su numero %d es: %d.\n", numero, conteoDigitos(numero));
-    printf("\n");
-    // SEGUNDA PARTE - SUMA DE LOS DIGITOS
-    printf("La suma de los digitos del numero %d es: %d.\n", numero, sumaDigitos(numero));
+    // RESTRICCION PARA NUMEROS POSITIVOS
+    if (numero > 0)
+    {
+        // PRIMERA PARTE DEL CONTEO
+        printf("La cantidad de digitos de su numero %d es: %d.\n", numero, conteoDigitos(numero));
+        printf("\n");
+        // SEGUNDA PARTE - SUMA DE LOS DIGITOS
+        printf("La suma de los digitos del numero %d es: %d.\n", numero, sumaDigitos(numero));
+    }
+    else
+    {
+        printf("El numero es negativo o cero, reintente con un numero positivo.\n");
+    }
+
     return 0;
 }
