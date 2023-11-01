@@ -50,5 +50,6 @@ int main()
         printf("El numero es negativo o cero, reintente con un numero positivo.\n");
     }
 
+    printf("Fin.");
     return 0;
 }
